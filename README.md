@@ -1,3 +1,26 @@
+# Installing Docker from the official website. 
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+`sudo apt-get update`  
+`sudo apt-get install ca-certificates curl`  
+`sudo install -m 0755 -d /etc/apt/keyrings`  
+`sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc`  
+`sudo chmod a+r /etc/apt/keyrings/docker.asc`  
+
+# Add the repository to Apt sources:
+The following command is in one line  
+  
+`echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null` 
+
+# Updating system and installing Docker:  
+`sudo apt-get update`  
+`sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
+
+# Checking if docker works
+`sudo docker run hello-world`
+
+# Docker Common Commands
+
 - Run Docker Compose: `docker compose up -d` / `docker compose up`
 
 - Check Docker Compose's volumens status: `docker compose ps -a` / `docker compose ps`
