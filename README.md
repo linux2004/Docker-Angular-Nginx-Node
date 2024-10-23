@@ -16,10 +16,10 @@ The following command is in one line
 `sudo apt-get update`  
 `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
 
-# Checking if docker works
+# Checking if Docker works
 `sudo docker run hello-world`
 
-# Docker Common Commands
+# Docker common commands
 
 - Run Docker Compose: `docker compose up -d` / `docker compose up`
 
