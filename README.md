@@ -18,6 +18,15 @@ The following command is in one line
 
 # Checking if Docker works
 `sudo docker run hello-world`
+# Change the Docker to non-root user
+Docs https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user 
+
+`sudo groupadd docker`   
+`sudo usermod -aG docker $USER`   
+`newgrp docker`  
+Checking of Docker works with current user  
+  
+`docker run hello-world`
 
 # Docker common commands
 
