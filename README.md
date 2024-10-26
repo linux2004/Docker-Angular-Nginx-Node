@@ -24,8 +24,9 @@ Docs https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-
 `sudo groupadd docker`   
 `sudo usermod -aG docker $USER`   
 `newgrp docker`  
+   
 Checking of Docker works with current user  
-  
+   
 `docker run hello-world`
 
 # Docker common commands
