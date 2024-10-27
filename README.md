@@ -12,8 +12,7 @@ The following command is in one line
   
 `echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null` 
 
-# Updating system and installing Docker:  
-`sudo apt-get update`  
+# Updating system and installing Docker:    
 `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
 
 # Checking if Docker works
