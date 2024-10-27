@@ -1,4 +1,5 @@
-# Installing Docker from the official website. 
+# Installing Docker from the official website.
+## Set up Docker's apt repository. 
 https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 `sudo apt-get update`  
@@ -7,17 +8,17 @@ https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 `sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc`  
 `sudo chmod a+r /etc/apt/keyrings/docker.asc`  
 
-# Add the repository to Apt sources:
+## Add the repository to Apt sources:
 The following command is in one line  
   
 `echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null` 
 
-# Updating system and installing Docker:    
+## Updating system and installing Docker:    
 `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
 
-# Checking if Docker works
+## Checking if Docker works
 `sudo docker run hello-world`
-# Change the Docker to non-root user
+## Change the Docker to non-root user
 Docs https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user 
 
 `sudo groupadd docker`   
